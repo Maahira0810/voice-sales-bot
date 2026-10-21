@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
       method: "POST",
       headers: { "content-type": "application/json", authorization: "Bearer " + getKey() },
       body: JSON.stringify({
-        model: process.env.MODEL || "llama-3.3-70b-versatile",
+        model: process.env.MODEL || "llama-3.1-8b-instant",
         max_tokens: Math.min(Number(max_tokens) || 300, 800),
         temperature: 0.6,
         messages: [{ role: "user", content: prompt }]
